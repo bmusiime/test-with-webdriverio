@@ -20,7 +20,7 @@ npm i chromedriver --save-dev
 
 ```
 
-## Run selenium
+## Run selenium (optional)
 
 ```
 java -jar lib/selenium-server-standalone-3.141.59.jar -role hub -port 4444
