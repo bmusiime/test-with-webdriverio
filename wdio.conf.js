@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 exports.config = {
   //
   // ====================
@@ -158,7 +160,13 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    */
   onPrepare: function (config, capabilities) {
-    console.log('------------ starting up-------------------');
+    console.log('------------ starting up-------------------'); 
+    console.log('Create screenshots directory ');
+    var dir = './screenshots';
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
+    
   },
   /**
    * Gets executed before a worker process is spawned and can be used to initialise specific service
