@@ -5,11 +5,11 @@
 
 # screenshots
 /screenshots/*.png
+!/screenshots/
 
 # logs
 /logs/*
-
-!/logs/log.txt
+!/logs/
 
 # misc
 .DS_Store
