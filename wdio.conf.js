@@ -56,7 +56,6 @@ exports.config = {
       browserName: "chrome",
       "goog:chromeOptions": {
         args: [
-          "--headless",
           "–no-sandbox",
           "--disable-gpu",
           "--window-size=1440,800",
@@ -76,6 +75,8 @@ exports.config = {
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: "info",
+
+  outputDir:'logs',
   //
   // Set specific log levels per logger
   // loggers:
@@ -156,8 +157,9 @@ exports.config = {
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
    */
-  // onPrepare: function (config, capabilities) {
-  // },
+  onPrepare: function (config, capabilities) {
+    console.log('------------ starting up-------------------');
+  },
   /**
    * Gets executed before a worker process is spawned and can be used to initialise specific service
    * for that worker as well as modify runtime environments in an async fashion.
@@ -185,6 +187,7 @@ exports.config = {
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
   // before: function (capabilities, specs) {
+  //   browser.url('/')
   // },
   /**
    * Runs before a WebdriverIO command gets executed.
@@ -249,9 +252,9 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that ran
    */
-  after: function (result, capabilities, specs) {
-    browser.close();
-  },
+  // after: function (result, capabilities, specs) {
+  //   browser.close();
+  // },
   /**
    * Gets executed right after terminating the webdriver session.
    * @param {Object} config wdio configuration object
@@ -268,8 +271,10 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
-  // },
+  onComplete: function(exitCode, config, capabilities, results) {
+    // browser.deleteSession();
+    console.log('------------ all done -------------------');
+  },
   /**
    * Gets executed when a refresh happens.
    * @param {String} oldSessionId session ID of the old session

@@ -6,6 +6,9 @@
 # screenshots
 /screenshots/*.png
 
+# logs
+/logs/*
+
 # misc
 .DS_Store
 *.d.ts
