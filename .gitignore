@@ -9,6 +9,8 @@
 # logs
 /logs/*
 
+!/logs/log.txt
+
 # misc
 .DS_Store
 *.d.ts
