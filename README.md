@@ -25,3 +25,15 @@ npm i chromedriver --save-dev
 ```
 java -jar lib/selenium-server-standalone-3.141.59.jar -role hub -port 4444
 ```
+
+## Install requirements
+
+```
+npm i
+```
+
+## Run tests
+
+```
+npx wdio
+```
