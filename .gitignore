@@ -16,3 +16,4 @@
 *.d.ts
 !/src/declaration/*.d.ts
 /.idea
+.vscode/

@@ -235,7 +235,8 @@ exports.config = {
     context,
     { error, result, duration, passed, retries }
   ) {
-    browser.saveScreenshot("./screenshots/screenshot" + Date.now() + ".png");
+    Date.now()
+    // browser.saveScreenshot("./screenshots/screenshot" + Date.now() + ".png");
   },
 
   /**
@@ -280,7 +281,7 @@ exports.config = {
    * @param {<Object>} results object containing test results
    */
   onComplete: function(exitCode, config, capabilities, results) {
-    // browser.deleteSession();
+    browser.deleteSession();
     console.log('------------ all done -------------------');
   },
   /**

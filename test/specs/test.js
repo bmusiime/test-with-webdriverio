@@ -10,7 +10,10 @@ describe("Google search", () => {
     browser.url('/')
     const _searchfor = "automation testing"
     browser.keys([_searchfor, "Enter"])
-    browser.waitUntil(50);
+    browser.waitUntil(50)
+    assert.strictEqual(true, true)
+    const title = browser.getTitle()
+    console.log(title) // outputs "title"
     expect($$('h3[Text()="xxxx"]')).toBeDisplayed() // expected this to fail as input with name xxx does not exist.
   }) 
   it("Seach for WebdriverIO on google - asyncronous", async () => {
