@@ -236,7 +236,7 @@ exports.config = {
     { error, result, duration, passed, retries }
   ) {
     Date.now()
-    // browser.saveScreenshot("./screenshots/screenshot" + Date.now() + ".png");
+    browser.saveScreenshot("./screenshots/screenshot" + Date.now() + ".png");
   },
 
   /**
